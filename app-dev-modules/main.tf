@@ -18,7 +18,7 @@ variable "subnet_address_prefixes" {
 }
 
 module "networking" {
-  source  = "app.terraform.io/jspitzig/networking/azurerm"
+  source  = "app.terraform.io/jspitzig-org/networking/azurerm"
   version = "0.0.1"
   
   name                 = "${var.name}"
@@ -28,7 +28,7 @@ module "networking" {
 }
 
  module "webserver" {
-   source  = "app.terraform.io/cardinalsolutions/jspitzig/azurerm"
+   source  = "app.terraform.io/jspitzig-org/azurerm"
    version = "0.0.1"
 
    name      = "${var.name}"
@@ -40,7 +40,7 @@ module "networking" {
  }
 
  module "appserver" {
-   source  = "app.terraform.io/cardinalsolutions/jspitzig/azurerm"
+   source  = "app.terraform.io/jspitzig-org/azurerm"
    version = "0.0.1"
 
    name      = "${var.name}"
@@ -52,7 +52,7 @@ module "networking" {
  }
 
  module "dataserver" {
-   source  = "app.terraform.io/cardinalsolutions/jspitzig/azurerm"
+   source  = "app.terraform.io/jspitzig-org/azurerm"
    version = "0.0.1"
 
    name      = "${var.name}"
