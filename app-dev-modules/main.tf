@@ -28,7 +28,7 @@ module "networking" {
 }
 
  module "webserver" {
-   source  = "app.terraform.io/jspitzig-org/azurerm"
+   source  = "app.terraform.io/jspitzig-org/webserver/azurerm"
    version = "0.0.1"
 
    name      = "${var.name}"
@@ -40,7 +40,7 @@ module "networking" {
  }
 
  module "appserver" {
-   source  = "app.terraform.io/jspitzig-org/azurerm"
+   source  = "app.terraform.io/jspitzig-org/appserver/azurerm"
    version = "0.0.1"
 
    name      = "${var.name}"
@@ -52,7 +52,7 @@ module "networking" {
  }
 
  module "dataserver" {
-   source  = "app.terraform.io/jspitzig-org/azurerm"
+   source  = "app.terraform.io/jspitzig-org/dataserver/azurerm"
    version = "0.0.1"
 
    name      = "${var.name}"
